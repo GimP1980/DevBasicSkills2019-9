@@ -2,14 +2,66 @@
 
 <html lang="en">
 <head>
+    
   <meta charset="utf-8">
 
   <title>Number converter</title>
   <meta name="description" content="Number converter">
   
   <link rel="stylesheet" href="styles.css">
-
+  <head>
+    <style>
+    body {margin:0;}
+    
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+    
+    .active {
+      background-color: rgb(26, 95, 29);
+    }
+    </style>
+    </head>
+    <body>
+    
+    <ul>
+      <li><a class="active" href="#converter">Number converter</a></li>
+      <li><a href="#system_outputs">Number system outputs</a></li>
+      <li><a href="#combinatorics">Combinatorics</a></li>
+      <li><a href="#tables">Truth tables</a></li>
+      <li><a href="#random">Random values</a></li>
+    </ul>
+    
+    <div style="padding:20px;margin-top:30px;background-color:#97d3c7;height:1500px;">
+      <h1>Number converter</h1>
+    </div>
+    
+    </body>
 </head>
+
 
 <body>
   <script src="scripts.js"></script>
