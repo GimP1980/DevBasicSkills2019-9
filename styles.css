@@ -1,1 +1,52 @@
-//something
+.calc2
+{
+    margin-top: 60px;
+    background-color: rgb(173, 170, 170);
+    padding: 40px;
+    margin-left: 500px;
+    border-radius: 10px;
+    box-shadow: rgb(31, 29, 29) 10px 10px 5px;
+}
+
+tbody
+{
+    border: black;
+
+}
+
+.math
+{
+    padding: 10px;
+
+}
+
+.text
+{
+    font-family: Verdana;
+}
+
+.btn
+{
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: rgb(211, 211, 211);
+    }
+
+.mathsymbol
+{
+    font-family: Verdana;
+}
+.heading
+{
+    margin-top: 150px;
+    margin-left: 32%;
+    color: white;
+}
+
+.intro
+{
+    margin-left: 32%;
+    color: white;
+}
+

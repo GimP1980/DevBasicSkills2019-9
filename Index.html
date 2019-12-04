@@ -43,24 +43,122 @@
     .active {
       background-color: rgb(26, 95, 29);
     }
+
+    body {
+      background-color: rgb(1, 73, 1);
+    }
     </style>
     </head>
     <body>
+      
     
     <ul>
       <li><a class="active" href="#converter">Number converter</a></li>
-      <li><a href="#system_outputs">Number system outputs</a></li>
+      <li><a href="number_system.html">Number system outputs</a></li>
       <li><a href="#combinatorics">Combinatorics</a></li>
       <li><a href="#tables">Truth tables</a></li>
       <li><a href="#random">Random values</a></li>
     </ul>
     
-    <div style="padding:20px;margin-top:30px;background-color:#97d3c7;height:1500px;">
-      <h1>Number converter</h1>
-    </div>
+   <h2 class="heading">Number Base Converter</h2>
+   <h3 class="intro">Enter a number in one of the text boxes and press the Convert button:</h3>
+
+    <form name="calcform" autocomplete="off">
+      <table class="calc2">
+        <tbody>
+        <tr>
+          <td><label class="text" for="bin">Binary number:</label></td>
+        <td class="math"><input type="text" inputmode="numeric" id="bin" name="bin" autofocus=""></td>
+          <td class="mathsymbol"><sub>2</sub></td>
+          <td><input onclick="Convert_Bin()" type="button" value="Convert" class="btn"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="oct">Octal number:</label></td>
+        <td class="math"><input type="text" inputmode="numeric" id="oct" name="oct"></td>
+          <td class="mathsymbol"><sub>8</sub></td>
+          <td><input onclick="Convert_Oct()" type="button" value="Convert" class="btn"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="dec">Decimal number:</label></td>
+        <td class="math"><input type="text" inputmode="numeric" id="dec" name="dec"></td>
+          <td class="mathsymbol"><sub>10</sub></td>
+          <td><input onclick="Convert_Dec()" type="button" value="Convert" class="btn"></td>
+        </tr>
+        <tr>
+          <td><label class="text" for="x">Hex number:</label></td>
+        <td class="math"><input type="text" id="hex" name="hex"></td>
+          <td class="mathsymbol"><sub>16</sub></td>
+          <td><input onclick="Convert_Hex()" type="button" value="Convert" class="btn"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td><input type="reset" value="Reset" class="btn"></td>
+        </tr>
+        </tbody>
+      </table>
+      </form>
     
     </body>
 </head>
+
+<script>
+	function setfocus() {
+		document.calcform.dec.focus();
+	}
+	function Convert_Bin() 
+	{
+		num = document.calcform.bin.value;
+		if( num=="" )
+			return;
+		num = parseInt(num,2);
+		document.calcform.oct.value = num.toString(8);
+		document.calcform.dec.value = num.toString(10);
+		num = num.toString(16);
+		document.calcform.hex.value = num.toUpperCase();
+	}
+	function Convert_Oct() 
+	{
+		num = document.calcform.oct.value;
+		if( num=="" )
+			return;
+		num = parseInt(num,8);
+		document.calcform.bin.value = num.toString(2);
+		document.calcform.dec.value = num.toString(10);
+		num = num.toString(16);
+		document.calcform.hex.value = num.toUpperCase();
+	}
+	function Convert_Dec() 
+	{
+		num = document.calcform.dec.value;
+		if( num=="" )
+			return;
+		num = parseInt(num,10);
+		if( num<0 ) {
+			if( num>=-32768 )
+				num+=65536;
+			else if( num>=-Math.pow(2,31))
+				num+=Math.pow(2,32);
+			else if( num>=-Math.pow(2,63) )
+				num+=Math.pow(2,64);
+		}
+		document.calcform.bin.value = num.toString(2);
+		document.calcform.oct.value = num.toString(8);
+		num = num.toString(16);
+		document.calcform.hex.value = num.toUpperCase();
+	}
+	function Convert_Hex() 
+	{
+		num = document.calcform.hex.value;
+		if( num=="" )
+			return;
+		num = parseInt(num,16);
+		document.calcform.bin.value = num.toString(2);
+		document.calcform.oct.value = num.toString(8);
+		document.calcform.dec.value = num.toString(10);
+	}
+	</script>
 
 
 <body>
