@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head><html lang="en">
+    <body>
         <head>
             
           <meta charset="utf-8">
@@ -48,8 +49,8 @@
               background-color: rgb(1, 73, 1);
             }
             </style>
-            </head>
-            <body>
+        </head>
+        
               
             
             <ul>
@@ -60,7 +61,25 @@
               <li><a class="active"href="random-values.html">Random values</a></li>
             </ul>
 
-    <body>
+            <div class="calc2">
+                
+                    <h2 class="head">Random number generator</h2>
+                    
+                    <p class="ins">Every time you click the button, you get a random number between 0 
+                        and 999999:</p>
+                    
+                    <button onclick="document.getElementById('demo').innerHTML = getRndInteger(0,1000000)">Randomize</button>
+                    
+                    <p class="ans" id="demo"></p>
+                    
+                    <script>
+                    function getRndInteger(min, max) {
+                      return Math.floor(Math.random() * (max - min)) + min;
+                    }
+                    </script>
+            </div>
+    </body>               
+    
             
-    </body>
+    
 </head>

@@ -1,1 +1,26 @@
-<!-- here should be something -->
+.calc2
+{
+    margin-top: 100px;
+    margin-left: 420px;
+    padding: 40px;
+}
+
+tbody
+{
+    color: grey;
+}
+
+.head
+{
+    color: white;
+}
+
+.ins
+{
+    color: white;
+}
+
+.ans
+{
+    color: white;
+}
