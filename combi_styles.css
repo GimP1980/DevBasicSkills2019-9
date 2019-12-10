@@ -1,22 +1,43 @@
-.calc
+.heading
 {
-    margin-top: 100;
+    margin-top: 100px;
+    margin-left: 450px;
+    color: white    ;
+    padding-bottom: 10px;
+
 }
 
+.calcs
+{
+    margin-left: 500px
+}
 
 
 
 .per1
 {
     color: white;
+    padding: 10px 10px 10px 10px
+    
 }
 
 .per2
 {
-    color: white
+    color: white;
+    padding: 10px 10px 10px 10px
+    
 }
 
 .com1
 {
     color: white;
+    padding: 10px 10px 10px 10px
+    
+}
+
+.com2
+{
+    color: white;
+    padding: 10px 10px 10px 10px
+    
 }
