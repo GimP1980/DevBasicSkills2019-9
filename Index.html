@@ -63,104 +63,31 @@
    <h2 class="heading">Number Base Converter</h2>
    <h3 class="intro">Enter a number in one of the text boxes and press the Convert button:</h3>
 
-    <form name="calcform" autocomplete="off">
-      <table class="calc2">
-        <tbody>
-        <tr>
-          <td><label class="text" for="bin">Binary number:</label></td>
-        <td class="math"><input type="text" inputmode="numeric" id="bin" name="bin" autofocus=""></td>
-          <td class="mathsymbol"><sub>2</sub></td>
-          <td><input onclick="Convert_Bin()" type="button" value="Convert" class="btn"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="oct">Octal number:</label></td>
-        <td class="math"><input type="text" inputmode="numeric" id="oct" name="oct"></td>
-          <td class="mathsymbol"><sub>8</sub></td>
-          <td><input onclick="Convert_Oct()" type="button" value="Convert" class="btn"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="dec">Decimal number:</label></td>
-        <td class="math"><input type="text" inputmode="numeric" id="dec" name="dec"></td>
-          <td class="mathsymbol"><sub>10</sub></td>
-          <td><input onclick="Convert_Dec()" type="button" value="Convert" class="btn"></td>
-        </tr>
-        <tr>
-          <td><label class="text" for="x">Hex number:</label></td>
-        <td class="math"><input type="text" id="hex" name="hex"></td>
-          <td class="mathsymbol"><sub>16</sub></td>
-          <td><input onclick="Convert_Hex()" type="button" value="Convert" class="btn"></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-          <td><input type="reset" value="Reset" class="btn"></td>
-        </tr>
-        </tbody>
-      </table>
-      </form>
+   <div class="container">
+    <h1 class="head">Number converter</h1>
+    <p class="choose">Choose number systems:</p>
+    <select class="selector1" name="nmbrSystemSelector" id="fromSelector">
+        <option value="bin">BIN</option>
+        <option value="dec">DEC</option>
+        <option value="oct">OCT</option>
+        <option value="hex">HEX</option>
+    </select>
+    <p class="to">to</p>
+    <select class="selector2" name="nmbrSystemSelector2" id="toSelector">
+        <option value="bin">BIN</option>
+        <option value="dec">DEC</option>
+        <option value="oct">OCT</option>
+        <option value="hex">HEX</option>
+    </select>
+    <p class="input">Input your number:</p>
+    <input id="inputField" class="inputField" type="text">
+    <button onclick="buttonPressed()" class="convertBtn" >Convert</button>
+    <h2 class="resultTxt">Result:</h2>
+    <h2 class="result" id="conversionResult"></h2>
+</div>
     
     </body>
 </head>
-
-<script>
-	function setfocus() {
-		document.calcform.dec.focus();
-	}
-	function Convert_Bin() 
-	{
-		num = document.calcform.bin.value;
-		if( num=="" )
-			return;
-		num = parseInt(num,2);
-		document.calcform.oct.value = num.toString(8);
-		document.calcform.dec.value = num.toString(10);
-		num = num.toString(16);
-		document.calcform.hex.value = num.toUpperCase();
-	}
-	function Convert_Oct() 
-	{
-		num = document.calcform.oct.value;
-		if( num=="" )
-			return;
-		num = parseInt(num,8);
-		document.calcform.bin.value = num.toString(2);
-		document.calcform.dec.value = num.toString(10);
-		num = num.toString(16);
-		document.calcform.hex.value = num.toUpperCase();
-	}
-	function Convert_Dec() 
-	{
-		num = document.calcform.dec.value;
-		if( num=="" )
-			return;
-		num = parseInt(num,10);
-		if( num<0 ) {
-			if( num>=-32768 )
-				num+=65536;
-			else if( num>=-Math.pow(2,31))
-				num+=Math.pow(2,32);
-			else if( num>=-Math.pow(2,63) )
-				num+=Math.pow(2,64);
-		}
-		document.calcform.bin.value = num.toString(2);
-		document.calcform.oct.value = num.toString(8);
-		num = num.toString(16);
-		document.calcform.hex.value = num.toUpperCase();
-	}
-	function Convert_Hex() 
-	{
-		num = document.calcform.hex.value;
-		if( num=="" )
-			return;
-		num = parseInt(num,16);
-		document.calcform.bin.value = num.toString(2);
-		document.calcform.oct.value = num.toString(8);
-		document.calcform.dec.value = num.toString(10);
-	}
-	</script>
-
-
 <body>
   <script src="scripts.js"></script>
 </body>
