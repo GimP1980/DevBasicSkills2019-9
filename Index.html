@@ -61,25 +61,25 @@
     </ul>
     
    <h2 class="heading">Number Base Converter</h2>
-   <h3 class="intro">Enter a number in one of the text boxes and press the Convert button:</h3>
+   <h3 class="intro">Choose number systems from and to be converted:</h3>
 
    <div class="container">
-    <h1 class="head">Number converter</h1>
-    <p class="choose">Choose number systems:</p>
-    <select class="selector1" name="nmbrSystemSelector" id="fromSelector">
-        <option value="bin">BIN</option>
-        <option value="dec">DEC</option>
-        <option value="oct">OCT</option>
-        <option value="hex">HEX</option>
-    </select>
-    <p class="to">to</p>
-    <select class="selector2" name="nmbrSystemSelector2" id="toSelector">
-        <option value="bin">BIN</option>
-        <option value="dec">DEC</option>
-        <option value="oct">OCT</option>
-        <option value="hex">HEX</option>
-    </select>
-    <p class="input">Input your number:</p>
+    <div class="selectContainer">
+      <select class="selector1" name="nmbrSystemSelector" id="fromSelector">
+          <option value="bin">BIN</option>
+          <option value="dec">DEC</option>
+          <option value="oct">OCT</option>
+          <option value="hex">HEX</option>
+      </select>
+      <p class="to">to</p>
+      <select class="selector2" name="nmbrSystemSelector2" id="toSelector">
+          <option value="bin">BIN</option>
+          <option value="dec">DEC</option>
+          <option value="oct">OCT</option>
+          <option value="hex">HEX</option>
+      </select>
+    </div>
+    <h3 class="input">Input your number:</h3>
     <input id="inputField" class="inputField" type="text">
     <button onclick="buttonPressed()" class="convertBtn" >Convert</button>
     <h2 class="resultTxt">Result:</h2>
