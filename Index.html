@@ -60,10 +60,10 @@
       <li><a href="random-values.html">Random values</a></li>
     </ul>
     
-   <h2 class="heading">Number Base Converter</h2>
-   <h3 class="intro">Choose number systems from and to be converted:</h3>
-
-   <div class="container">
+    
+    <div class="container">
+        <h2 class="heading">Number Base Converter</h2>
+        <h3 class="intro">Choose number systems from and to be converted:</h3>
     <div class="selectContainer">
       <select class="selector1" name="nmbrSystemSelector" id="fromSelector">
           <option value="bin">BIN</option>
@@ -79,12 +79,15 @@
           <option value="hex">HEX</option>
       </select>
     </div>
-    <h3 class="input">Input your number:</h3>
-    <input id="inputField" class="inputField" type="text">
-    <button onclick="buttonPressed()" class="convertBtn" >Convert</button>
-    <h2 class="resultTxt">Result:</h2>
-    <h2 class="result" id="conversionResult"></h2>
-</div>
+    <div class="inputContainer">
+      <div><h3 class="input">Input your number:</h3></div>
+      <div><input id="inputField" class="inputField" type="text"></div>
+      <div><button onclick="buttonPressed()" class="convertBtn" >Convert</button></div>
+      <div><h2 class="resultTxt">Result:</h2></div>
+      <div><h2 class="result" id="conversionResult"></h2></div>
+    </div>
+  </div>
+  </div>
     
     </body>
 </head>
