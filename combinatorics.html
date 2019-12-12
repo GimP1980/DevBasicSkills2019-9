@@ -1,93 +1,75 @@
 <!DOCTYPE html>
-
 <head><html lang="en">
-        <head>
-            
-          <meta charset="utf-8">
-        
-          <title>Combinatorics</title>
-          <meta name="description" content="Combinatorics">
-          
-          <link rel="stylesheet" href="combi_styles.css">
-          <head>
-            <style>
-            body {margin:0;}
-            
-            ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              background-color: #333;
-              position: fixed;
-              top: 0;
-              width: 100%;
-            }
-            
-            li {
-              float: left;
-            }
-            
-            li a {
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-            
-            li a:hover:not(.active) {
-              background-color: #111;
-            }
-            
-            .active {
-              background-color: rgb(26, 95, 29);
-            }
-        
-            body {
-              background-color: rgb(1, 73, 1);
-            }
-            </style>
-            </head>
-            <body>
-              
-            
+<head>  
+   <meta charset="utf-8">
+   <title>Combinatorics</title>
+   <meta name="description" content="Combinatorics">
+   <link rel="stylesheet" href="combi_styles.css">
+   <head>
+   <style>
+   body {
+      margin:0;
+   }
+   ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+   }
+   li {
+      float: left;
+   }
+   li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+   }
+   li a:hover:not(.active) {
+      background-color: #111;
+   }
+   .active {
+      background-color: rgb(26, 95, 29);
+   }
+   body {
+      background-color: rgb(1, 73, 1);
+   }
+   </style>
+   </head>
+      <body>           
             <ul>
               <li><a href="Index.html">Number converter</a></li>
               <li><a href="number_system.html">Number system outputs</a></li>
               <li><a class="active" href="combinatorics.html">Combinatorics</a></li>
               <li><a href="truth_tables.html">Truth tables</a></li>
               <li><a href="random-values.html">Random values</a></li>
-            </ul>
-            
+            </ul>            
             <h2 class="heading"> Enter positive integer values for both N and K, and then click Calculate. </h2>
-
-            <body>
-                   
-                    
-                          
-                <script type="text/javascript" language="JavaScript">
-                    
-                    function dispos()
-                    {
-                    var numero = Math.round(document.disposizioni.num.value);
-                    var gruppo = Math.round(document.disposizioni.grup.value);
-                    var disp = 1;
-                    diff = numero - gruppo;
-                    while (numero > diff)
-                    {
-                    disp=disp*numero
-                    numero = numero - 1;
-                    }
-                    document.disposizioni.disp.value = disp;
-                    }
-                    function disposrip()
-                    {
+            <body>       
+                <script type="text/javascript" language="JavaScript">                    
+                  function dispos(){
+                     var numero = Math.round(document.disposizioni.num.value);
+                     var gruppo = Math.round(document.disposizioni.grup.value);
+                     var disp = 1;
+                     diff = numero - gruppo;
+                     while (numero > diff)
+                     {
+                     disp=disp*numero
+                     numero = numero - 1;
+                     }
+                     document.disposizioni.disp.value = disp;
+                  }                    
+                  function disposrip(){
                     var numero = Math.round(document.disposizionirip.num.value);
                     var gruppo = Math.round(document.disposizionirip.grup.value);
                     var disp = Math.pow(numero,gruppo);
                     document.disposizionirip.disp.value = disp;
-                    }
+                  }
                     function combin()
                     {
                     var numero = Math.round(document.combinazioni.num.value);
@@ -404,7 +386,7 @@
                          
                           <br>
                           <br>
-             </body>            
+         </body>            
                                             
                                             
                     
