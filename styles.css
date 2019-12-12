@@ -67,13 +67,14 @@ tbody
 }
 
 .input{
-    margin-left: 5px;
+    margin-left: 17px;
     color: white;
     font-size: 18px;
 
 }
 .inputField{
-    margin-left: 2%;
+    margin-left: 15px;
+    margin-top: -40px;
 }
 .convertBtn{
     margin-top: 7px;
