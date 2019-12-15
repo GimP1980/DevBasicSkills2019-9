@@ -87,9 +87,12 @@
                           var second = document.getElementById("second").value;
                           var givenNumbers = [] ;
 
-                          givenNumbers.push(amount)
+                          while(givenNumbers.length < amount){
+                            var randNumber = Math.floor((Math.random() * second + first) + 1);
+                            if (givenNumbers.indexOf(randNumber) === -1) givenNumbers.push(randNumber);
+                          }
 
-                          demo.innerHTML = Math.floor((Math.random() * second + first) + 1);
+                          demo.innerHTML = givenNumbers ;
                                                   
                           
                         }
