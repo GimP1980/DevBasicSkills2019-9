@@ -69,6 +69,7 @@
               <li><a href="combinatorics.html">Combinatorics</a></li>
               <li><a href="truth_tables.html">Truth tables</a></li>
               <li><a class="active"href="random-values.html">Random values</a></li>
+              <li><a href="Calculator.html">Calculator</a></li>
             </ul>
 
             <div class="calc2">
@@ -96,12 +97,10 @@
                           var first = document.getElementById("first").value;
                           var second = document.getElementById("second").value;
                           var givenNumbers = [] ;
-
                           while(givenNumbers.length < amount){
                             var randNumber = Math.floor((Math.random() * second + first) + 1);
                             if (givenNumbers.indexOf(randNumber) === -1) givenNumbers.push(randNumber);
                           }
-
                           demo.innerHTML = givenNumbers ;
                                                   
                           

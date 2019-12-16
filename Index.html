@@ -1,18 +1,15 @@
 <!doctype html>
-
 <html lang="en">
-<head>
-    
-  <meta charset="utf-8">
-
+<head> 
+<meta charset="utf-8">
   <title>Number converter</title>
   <meta name="description" content="Number converter">
-  
   <link rel="stylesheet" href="styles.css">
   <head>
     <style>
-    body {margin:0;}
-    
+    body {
+      margin:0;
+    }
     ul {
       list-style-type: none;
       margin: 0;
@@ -22,48 +19,40 @@
       position: fixed;
       top: 0;
       width: 100%;
-    }
-    
+    }    
     li {
       float: left;
-    }
-    
+    }    
     li a {
       display: block;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-    }
-    
+    }    
     li a:hover:not(.active) {
       background-color: #111;
-    }
-    
+    }   
     .active {
       background-color: rgb(26, 95, 29);
     }
-
     body {
       background-color: rgb(1, 73, 1);
     }
     </style>
-    </head>
-    <body>
-      
-    
+  </head>
+  <body>    
     <ul>
       <li><a class="active" href="Index.html">Number converter</a></li>
       <li><a href="number_system.html">Number system outputs</a></li>
       <li><a href="combinatorics.html">Combinatorics</a></li>
       <li><a href="truth_tables.html">Truth tables</a></li>
       <li><a href="random-values.html">Random values</a></li>
+      <li><a href="Calculator.html">Calculator</a></li>
     </ul>
-    
-   <h2 class="heading">Number Base Converter</h2>
-   <h3 class="intro">Choose number systems from and to be converted:</h3>
-
-   <div class="container">
+    <div class="container">
+        <h2 class="heading">Number Base Converter</h2>
+        <h3 class="intro">Choose number systems from and to be converted:</h3>
     <div class="selectContainer">
       <select class="selector1" name="nmbrSystemSelector" id="fromSelector">
           <option value="bin">BIN</option>
@@ -79,14 +68,15 @@
           <option value="hex">HEX</option>
       </select>
     </div>
-    <h3 class="input">Input your number:</h3>
-    <input id="inputField" class="inputField" type="text">
-    <button onclick="buttonPressed()" class="convertBtn" >Convert</button>
-    <h2 class="resultTxt">Result:</h2>
-    <h2 class="result" id="conversionResult"></h2>
-</div>
-    
-    </body>
+    <div class="inputContainer">
+      <div><h3 class="input">Input your number:</h3></div>
+      <div><input id="inputField" class="inputField" type="text"></div>
+      <div><button onclick="buttonPressed()" class="convertBtn" >Convert</button></div>
+      <div><h2 class="resultTxt">Result:</h2></div>
+      <div><h2 class="result" id="conversionResult"></h2></div>
+    </div>
+    </div>
+  </body>
 </head>
 <body>
   <script src="scripts.js"></script>
