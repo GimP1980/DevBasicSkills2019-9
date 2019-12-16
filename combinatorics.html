@@ -70,62 +70,62 @@
                     
                     function dispos()
                     {
-                    var numero = Math.round(document.disposizioni.num.value);
-                    var gruppo = Math.round(document.disposizioni.grup.value);
+                    var number = Math.round(document.disposizioni.num.value);
+                    var group = Math.round(document.disposizioni.grup.value);
                     var disp = 1;
-                    diff = numero - gruppo;
-                    while (numero > diff)
+                    diff = number - group;
+                    while (number > diff)
                     {
-                    disp=disp*numero
-                    numero = numero - 1;
+                    disp=disp*number
+                    number = number - 1;
                     }
                     document.disposizioni.disp.value = disp;
                     }
                     function disposrip()
                     {
-                    var numero = Math.round(document.disposizionirip.num.value);
-                    var gruppo = Math.round(document.disposizionirip.grup.value);
-                    var disp = Math.pow(numero,gruppo);
+                    var number = Math.round(document.disposizionirip.num.value);
+                    var group = Math.round(document.disposizionirip.grup.value);
+                    var disp = Math.pow(number,group);
                     document.disposizionirip.disp.value = disp;
                     }
                     function combin()
                     {
-                    var numero = Math.round(document.combinazioni.num.value);
-                    var gruppo = Math.round(document.combinazioni.grup.value);
+                    var number = Math.round(document.combinazioni.num.value);
+                    var group = Math.round(document.combinazioni.grup.value);
                     var disp = 1;
                     var fatt = 1;
                     var comb = 1;
-                    diff = numero - gruppo;
-                    while (numero > diff)
+                    diff = number - group;
+                    while (number > diff)
                     {
-                    disp=disp*numero
-                    numero = numero - 1;
+                    disp=disp*number
+                    number = number - 1;
                     }
-                    while (gruppo > 0)
+                    while (group > 0)
                     {
-                    fatt=fatt*gruppo;
-                    gruppo--;
+                    fatt=fatt*group;
+                    group--;
                     }
                     comb = Math.round(disp/fatt);
                     document.combinazioni.comb.value = comb;
                     }
                     function combinrip()
                     {
-                    var numero = Math.round(document.combinazionirip.num.value);
-                    var gruppo = Math.round(document.combinazionirip.grup.value);
+                    var number = Math.round(document.combinazionirip.num.value);
+                    var group = Math.round(document.combinazionirip.grup.value);
                     var disp = 1;
                     var fatt = 1;
                     var comb = 1;
-                    var tot = numero+gruppo-1;
-                    while ((tot > numero-1))
+                    var tot = number+group-1;
+                    while ((tot > number-1))
                     {
                     disp=disp*tot;
                     tot = tot - 1;
                     }
-                    while (gruppo > 0)
+                    while (group > 0)
                     {
-                    fatt=fatt*gruppo;
-                    gruppo--;
+                    fatt=fatt*group;
+                    group--;
                     }
                     comb = Math.round(disp/fatt);
                     document.combinazionirip.comb.value = comb;
@@ -339,8 +339,8 @@
                              </form>
                                                      </td>
                                                      </tr>
-                                                     <tr>
-                                                     <td>
+                           <tr>
+                           <td>
 
 
                            <a name="rjava4"></a>
