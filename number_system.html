@@ -47,6 +47,25 @@
             body {
               background-color: rgb(1, 73, 1);
             }
+            .printBin{
+              color: white;
+            }
+            .printBtn{
+              margin-top: 80px;
+            }
+            .clearBtn{
+              margin-top: 80px;
+            }
+            .container{
+              margin-top: 10px;
+              display: grid;
+              grid-template-columns: 100px 100px 100px 100px;
+              color: white;
+            }
+            .btnContainer{
+              display: grid;
+              grid-template-columns: 100px 100px 100px 100px;
+            }
             </style>
             </head>
             <body>
@@ -59,8 +78,54 @@
               <li><a href="truth_tables.html">Truth tables</a></li>
               <li><a href="random-values.html">Random values</a></li>
             </ul>
+            <div class="btnContainer">
+              <button class="printBtn" onclick="printBin(), printOct(), printDec(), printHex()">Print</button>
+              <button class="clearBtn" onclick="clearTable()">Clear</button>
+            </div>
+            <div class="container">
+              <div>Decimal<p class="printDec" id="dec"></p></div>
+              <div>Binary<p class="printBin" id="bin"></p></div>
+              <div>Octal<p class="printOct" id="oct"></p></div>
+              <div>Hexadecimal<p class="printHex" id="hex"></p></div>
+            </div>
 
     <body>
             
     </body>
+    <script>
+      function printBin(){
+        for( let i=0; i<50; i++){
+          let bin = (document.getElementById("bin"));
+          let binConvert = i.toString(2);
+          bin.innerHTML += (binConvert) + "<br>";
+        }
+      }
+      function printOct(){
+        for( let i=0; i<50; i++){
+          let oct = (document.getElementById("oct"));
+          let octConvert = i.toString(8);
+          oct.innerHTML += (octConvert) + "<br>";
+        }
+      }
+      function printDec(){
+        for( let i=0; i<50; i++){
+          let dec = (document.getElementById("dec"));
+          let decConvert = i.toString(10);
+          dec.innerHTML += (decConvert) + "<br>";
+        }
+      }
+      function printHex(){
+        for( let i=0; i<50; i++){
+          let hex = (document.getElementById("hex"));
+          let hexConvert = i.toString(16);
+          hex.innerHTML += (hexConvert) + "<br>";
+        }
+      }
+      function clearTable(){
+        hex.innerHTML = "" ;
+        dec.innerHTML = "" ;
+        oct.innerHTML = "" ;
+        bin.innerHTML = "" ;
+      }
+    </script>
 </head>
