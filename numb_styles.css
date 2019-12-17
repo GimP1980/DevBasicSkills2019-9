@@ -1,1 +1,12 @@
-<!-- here should be something -->
+.table {
+    display: table-cell;
+    column-count: 4;
+}
+
+.btnContainer {
+margin-left: 450px;
+}
+
+.container {
+    margin-left: 400px;
+}
