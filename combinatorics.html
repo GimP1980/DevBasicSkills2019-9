@@ -71,8 +71,8 @@
                     
                     function dispos()
                     {
-                    var number = Math.round(document.disposizioni.num.value);
-                    var group = Math.round(document.disposizioni.grup.value);
+                    var number = Math.round(document.permut.num.value);
+                    var group = Math.round(document.permut.grup.value);
                     var disp = 1;
                     diff = number - group;
                     while (number > diff)
@@ -80,19 +80,19 @@
                     disp=disp*number
                     number = number - 1;
                     }
-                    document.disposizioni.disp.value = disp;
+                    document.permut.disp.value = disp;
                     }
                     function disposrip()
                     {
-                    var number = Math.round(document.disposizionirip.num.value);
-                    var group = Math.round(document.disposizionirip.grup.value);
+                    var number = Math.round(document.permutrip.num.value);
+                    var group = Math.round(document.permutrip.grup.value);
                     var disp = Math.pow(number,group);
-                    document.disposizionirip.disp.value = disp;
+                    document.permutrip.disp.value = disp;
                     }
                     function combin()
                     {
-                    var number = Math.round(document.combinazioni.num.value);
-                    var group = Math.round(document.combinazioni.grup.value);
+                    var number = Math.round(document.combination.num.value);
+                    var group = Math.round(document.combination.grup.value);
                     var disp = 1;
                     var fatt = 1;
                     var comb = 1;
@@ -108,12 +108,12 @@
                     group--;
                     }
                     comb = Math.round(disp/fatt);
-                    document.combinazioni.comb.value = comb;
+                    document.combination.comb.value = comb;
                     }
                     function combinrip()
                     {
-                    var number = Math.round(document.combinazionirip.num.value);
-                    var group = Math.round(document.combinazionirip.grup.value);
+                    var number = Math.round(document.combirip.num.value);
+                    var group = Math.round(document.combirip.grup.value);
                     var disp = 1;
                     var fatt = 1;
                     var comb = 1;
@@ -129,7 +129,7 @@
                     group--;
                     }
                     comb = Math.round(disp/fatt);
-                    document.combinazionirip.comb.value = comb;
+                    document.combirip.comb.value = comb;
                     }
                     
                     </script>                    
@@ -168,7 +168,7 @@
                                 Permutation of M objects in a group of size N, N &le; M </table>
                              
                     
-                             <form action="" name="disposizioni">
+                             <form action="" name="permut">
                                 <table summary="">
                                    <tbody><tr>
                                       <td width="140">
@@ -229,7 +229,7 @@
                                 Permutation of M objects in a group of size N, repetitions allowed
                              </table>
                              
-                             <form action="" name="disposizionirip">
+                             <form action="" name="permutrip">
                                 <table summary="">
                                    <tbody><tr>
                                       <td width="140">
@@ -290,7 +290,7 @@
                                 Combination of M objects in a group of size N, N &le; M
                              </table>
                             
-                             <form action="" name="combinazioni">
+                             <form action="" name="combination">
                                 <table summary="">
                                    <tbody><tr>
                                       <td width="140">
@@ -350,7 +350,7 @@
                                 Combination of M objects in a group of size N, repetitions allowed
                             </table>
                              
-                             <form action="" name="combinazionirip">
+                             <form action="" name="combirip">
                                 <table summary="">
                                    <tbody><tr>
                                       <td width="140">
