@@ -1,129 +1,115 @@
 <!DOCTYPE html>
-
 <head><html lang="en">
-    <body>
-        <head>
-            
-          <meta charset="utf-8">
-        
-          <title>Random values</title>
-          <meta name="description" content="Random values">
-          
-          <link rel="stylesheet" href="random_styles.css">
-          <head>
-            <style>
-            body {margin:0;}
-            
-            ul {
-              list-style-type: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              background-color: #333;
-              position: fixed;
-              top: 0;
-              width: 100%;
+<body>
+<head>            
+  <meta charset="utf-8">        
+  <title>Random values</title>
+  <meta name="description" content="Random values">          
+  <link rel="stylesheet" href="random_styles.css">
+  <head>
+    <style>
+    body {
+      margin:0;
+    }           
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }            
+    li {
+      float: left;
+    }            
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }            
+    li a:hover:not(.active) {
+      background-color: #111;
+    }           
+    .active {
+      background-color: rgb(26, 95, 29);
+    }        
+    body {
+      background-color: rgb(1, 73, 1);
+    }
+    .resultCont{
+      text-align: center;
+      color: white;
+    }
+    p{
+      color: white;
+    }
+    h3{
+      color: white;
+    }
+    .occDiv{
+      color: white;
+    }
+    </style>
+</head>
+    <ul>
+      <li><a href="Index.html">Number converter</a></li>
+      <li><a href="number_system.html">Number system outputs</a></li>
+      <li><a href="combinatorics.html">Combinatorics</a></li>
+      <li><a href="truth_tables.html">Truth tables</a></li>
+      <li><a class="active"href="random-values.html">Random values</a></li>
+      <li><a href="Calculator.html">Calculator</a></li>
+    </ul>
+    <div class="calc2">              
+    <form method="get" action="">
+        <h2 class="head">Random number generator</h2>                  
+        <p>Generate <input id="amount" type="number" name="num" value="10" size="6" maxlength="12"> random numbers (maximum 10,000).</p>                  
+        <p>Insert value between <input id="first" type="number" name="min" value="0" size="6" maxlength="12"> and <input id="second" type="number" name="max" value="30" size="6" maxlength="12">
+        limit ±1,000,000,000.</p>                                                                                                                                                                                      
+    </form>
+      <button onclick = "getRndInteger()" >Generate</button>
+      <h3 id="rndmNumbers"></h3>  
+      <h3 id="sortedNumbers"></h3>
+      <div class="occDiv" id="occurances"></div>                                  
+        <script>
+            function getRndInteger(first, second) {
+              var amount = document.getElementById("amount").value;
+              var first = document.getElementById("first").value;
+              var second = document.getElementById("second").value;
+              var givenNumbers = [] ;
+              while(givenNumbers.length < amount){
+                var randNumber = Math.round((Math.random() * second));
+                if( randNumber >= first){
+                  givenNumbers.push(randNumber);
+                }
+              }
+              rndmNumbers.innerHTML = givenNumbers ; 
+              var tulokset = [] ;
+              for(let i = 0; i < givenNumbers.length; i++){
+                if (givenNumbers[i] in tulokset){
+                  tulokset[givenNumbers[i]]++ ;
+                }
+                else if(tulokset === undefined){
+                  tulokset = 0 ;
+                }
+                else{
+                  tulokset[givenNumbers[i]] = 1 ;
+                }
+              }
+              var keyValues = tulokset.keys();
+              for (const key of keyValues) {
+                var div = document.createElement("div");
+                document.getElementById("occurances").appendChild(div).id=key;
+                if(tulokset[key] == undefined){
+                  tulokset[key] = 0 ;
+                }
+                document.getElementById(key).innerHTML = key + " is found " + tulokset[key] + " times." ;
+              }
             }
-            
-            li {
-              float: left;
-            }
-            
-            li a {
-              display: block;
-              color: white;
-              text-align: center;
-              padding: 14px 16px;
-              text-decoration: none;
-            }
-            
-            li a:hover:not(.active) {
-              background-color: #111;
-            }
-            
-            .active {
-              background-color: rgb(26, 95, 29);
-            }
-        
-            body {
-              background-color: rgb(1, 73, 1);
-            }
-            .resultCont{
-              text-align: center;
-              color: white;
-            }
-            p{
-              color: white;
-            }
-            h3{
-              color: white;
-            }
-            </style>
-        </head>
-            <ul>
-              <li><a href="Index.html">Number converter</a></li>
-              <li><a href="number_system.html">Number system outputs</a></li>
-              <li><a href="combinatorics.html">Combinatorics</a></li>
-              <li><a href="truth_tables.html">Truth tables</a></li>
-              <li><a class="active"href="random-values.html">Random values</a></li>
-              <li><a href="Calculator.html">Calculator</a></li>
-            </ul>
-            <div class="calc2">              
-                <form method="get" action="">
-                    <h2 class="head">Random number generator</h2>                  
-                    <p>Generate <input id="amount" type="number" name="num" value="10" size="6" maxlength="12"> random numbers (maximum 10,000).</p>                  
-                    <p>Insert value between <input id="first" type="number" name="min" value="0" size="6" maxlength="12"> and <input id="second" type="number" name="max" value="30" size="6" maxlength="12">
-                    limit ±1,000,000,000.</p>                                                                                                                                                                                      
-                </form>
-                  <button onclick = "getRndInteger()" >Generate</button>
-                  <h3 id="rndmNumbers"></h3>  
-                  <h3 id="sortedNumbers"></h3>
-                  <h3 id="occurances"></h3>                                  
-                    <script>
-                        function getRndInteger(first, second) {
-                          var amount = document.getElementById("amount").value;
-                          var first = document.getElementById("first").value;
-                          var second = document.getElementById("second").value;
-                          var givenNumbers = [] ;
-                          while(givenNumbers.length < amount){
-                            var randNumber = Math.floor((Math.random() * second) + 1);
-                            givenNumbers.push(randNumber);
-                          }
-                          rndmNumbers.innerHTML = givenNumbers ; 
-                          var sortedArray = givenNumbers.slice().sort() ;
-                          sortedNumbers.innerHTML = sortedArray ;
-
-                          for( var i = 0; i <= second; i++){
-                            var firstIn = sortedArray.indexOf(i);
-                            var lastIn = sortedArray.lastIndexOf(i) ;
-                            var occurances = (lastIn - (firstIn + 1)) ;
-                            var div = document.createElement("div");
-
-                            document.getElementById("occurances").appendChild(div).id=i;
-                            document.getElementById(i).innerHTML = i + " Occurances: " + occurances ; 
-                          }
-                          // givenNumbers = [3, 3, 4, 5, 5, 5, 7, 7]
-                          // let tulokset = [] ;
-                          // for(let i = 0; i < givenNumbers.length; i++){
-                          //   if (givenNumbers[i] in tulokset){
-                          //     tulokset[givenNumbers[i]]++ ;
-                          //   }
-                          //   else if(tulokset[i] == undefined){
-                          //     tulokset[i] = 0 ;
-                          //   }
-                          //   else{
-                          //     tulokset[givenNumbers[i]] = 1 ;
-                          //   }
-                          //   var div = document.createElement("div");
-                          //   document.getElementById("occurances").appendChild(div).id=i;
-                          //   document.getElementById(i).innerHTML = i + " " + tulokset ;
-                          //   console.log(tulokset);
-                          // }
-                          // occurances.innerHTML = tulokset;
-
-
-                        }
-                    </script>                    
-            </div>
-    </body>                  
+        </script>                    
+      </div>
+</body>                  
 </head>
